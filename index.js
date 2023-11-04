@@ -57,13 +57,20 @@ function playSound(key) {
 function buttonAnimation(key) {
   
   var activeButton = document.querySelector("." + key);
-  switch (activeButton) {
-    case "w" || "a" || "s" || "d" || "j" || "k" || "l":
+  switch (key) {
+    case "w":
+    case "a":
+    case "s":
+    case "d":
+    case "j":
+    case "k":
+    case "l":
       activeButton.classList.add("pressed");
 
       setTimeout(function() {
         activeButton.classList.remove("pressed");
       }, 100);
+      
       break;
     default:
       // console.log(key);
